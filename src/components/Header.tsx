@@ -6,7 +6,7 @@ const Header = () => {
            </div>
 
            <nav className="flex w-auto justify-between text-white font-bold underline">
-                <a className="mr-3" href="/cards">Список пользователей</a>
+                <a className="mr-3" href="/users">Список пользователей</a>
            </nav>
         </header>
      );

@@ -3,21 +3,21 @@ import axios from 'axios'
 import React from "react";
 import { IUser } from "./api/users";
 
-const UsersPage = ({users}: any) => {
+const UsersPage = ({users}: {users: IUser[]}) => {
 
-    const arr = new Array(10).fill(20)
-
-    console.log(users)
+    // console.log(users)
 
     return ( 
-        <div className="w-full">
+        <>
             <Header />
-            <div className="">
-                {arr.map(el => (
-                    <div>{el}</div>
-                ))}
+            <div className="flex justify-center items-center h-screen">
+                <div className=''>
+                    {users.map(el => (
+                        <div className="text-cyan-800 font-bold text-lg mt-2">{el.name}</div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
      );
 }
 
